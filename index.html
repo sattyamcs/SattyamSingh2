@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Responsive Web</title>
+</head>
+
+<body>
+    <!-- Header Section  -->
+    <header class="header">
+        <a href="#" target="_blank" class="logo">SATTYAM SINGH</a>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li><a href="#" class="navbar-link">Home</a></li>
+                <li><a href="#" class="navbar-link">About</a></li>
+                <li><a href="#" class="navbar-link">Services</a></li>
+                <li><a href="#" class="navbar-link">Gallery</a></li>
+                <li><a href="https://www.linkedin.com/in/sattyam-singh/" class="btn navbar-btn">Contact Me</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-navbar-btn">
+            <ion-icon name="menu" class="mobile-nav-icon"></ion-icon>
+            <ion-icon name="close" class="mobile-nav-icon"></ion-icon>
+        </div>
+    </header>
+
+    <!-- Main Section  -->
+    <main>
+        <section class=" section section-hero">
+            <!-- We need parent div whenever we are using flex or grid -->
+            <div class="container grid grid-two-column">
+                <!-- Left Side -->
+                <div class="hero-data">
+                    <h1 class="primary-heading">Design, Develop and Deploy</h1>
+                    <p class="para">Front End/UI developer with experience in developing User Interfaces(UI) Applications and web Application using HTML,CSS,JavaScript,ReactJs, BootStrap, TailwindCSS, JQuery,AJAX,JSON, involved in understanding functional specifications and developing creative solutions to meet business requirements.</p>
+                    <a href="./SattyamRE2.pdf" class="btn" download="">Download CV</a>
+
+                    <!-- Again we are having two subsections right and left , again we need  parent container  -->
+                    <div class="hero-icons">
+                        <div class="grid grid-two-column">
+                            <a class="hero-icon-style" href="https://github.com/sattyamcs">
+                                <ion-icon name="logo-github" class="icon"></ion-icon>
+                                
+                            </a>
+                            <a class="hero-icon-style" href="https://www.linkedin.com/in/sattyam-singh/">
+                                <ion-icon name="logo-linkedin" class="icon"></ion-icon>
+                               
+                            </a>
+                            <a class="hero-icon-style" href="https://www.instagram.com/sattyamchauhan/">
+                                <ion-icon name="logo-instagram" class="icon"></ion-icon>
+                                
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right side -->
+                <div class="hero-image">
+                    <img src="./Sattyam.JPG" alt="Right-Image" class="image" width="400px" height="500px" >
+                    <div class="hero-image-overlay">
+                        <p>Front End/UI developer with experience in developing User Interfaces(UI) Applications and web Application using HTML,CSS,Javascript,React JS, Bootstrap, Tailwind CSS, JQuery,AJAX,JSON.</p>
+                        <p>Sattyam Singh</p>
+                        <p>Front-End Developer </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

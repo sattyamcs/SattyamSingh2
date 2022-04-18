@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:wght@200;400;500&family=Oswald:wght@300&family=Outfit:wght@300&family=Ubuntu:wght@300&display=swap");
+
+/* BASIC STYLING THAT IS USED IN EVERY DEVELOPMENT */
+/*   * is for universal seector that means it apllied for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+  /* 16px=1rem/10 */
+}
+
+/* Variables are declared because to use the same color in whole project */
+:root {
+  --primary-color: #162447;
+  --para-color: #80849c;
+  --white: #fff;
+  --helper-color: #417ff3;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: inline-block;
+  /* This property is used to display an element as an inline-level block container */
+}
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--primary-color);
+}
+.para {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--para-color);
+}
+
+/* Header and Navbar styling */
+.header {
+  height: 9.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5.5rem;
+  position: relative;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  color: #1f4068;
+  box-shadow: 0 6px 20px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+.logo::before{
+  content: " ";
+  position: absolute;
+  width: 10vw;
+  top: -10%;
+  left: 50%;
+  border-bottom: 5px solid red;
+  /* for making it center  */
+  transform: translate(-50%);
+}
+.logo::after{
+  content: " ";
+  position: absolute;
+  width: 10vw;
+  bottom: -15%;
+  left: 50%;
+  border-bottom: 5px solid red;
+  /* for making it center  */
+  transform: translate(-50%);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.navbar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Gap is always used in flex and provides a gap between elements in between them */
+  gap: 3.5rem;
+  font-size: 1.5rem;
+}
+.navbar-list .navbar-btn {
+  padding: 1.2rem 2.4rem;
+  background-color: var(--white);
+  border: 1px solid var(--helper-color);
+  color: var(--helper-color);
+  transition: 0.3s all ease-in-out;
+}
+.navbar-list .navbar-link:hover,
+.navbar-list .navbar-link:active {
+  color: brown;
+}
+.navbar-btn:hover {
+  color: var(--white);
+  background-color: var(--helper-color);
+  border: none;
+}
+.mobile-nav-icon {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+.mobile-navbar-btn {
+  display: none;
+}
+/* Selectors by attribute and value || Display none because we dont want to show close even in mobile view also */
+.mobile-nav-icon[name="close"] {
+  display: none;
+}
+
+/* Now from here we are giving reusable codes , Here mainly in main section */
+.section {
+  padding: 9.6rem 0;
+}
+.container {
+  /* max-width is gien because it will take max width this much in every device */
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+.grid-two-column {
+  grid-template-columns: repeat(4, 1fr);
+}
+/* .grid-two-column {
+  grid-template-columns: repeat(2, 1fr);
+} */
+.btn {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  padding: 1.2rem 2.4rem;
+  background-color: var(--helper-color);
+  color: var(--white);
+  border: 1px solid var(--helper-color);
+  transition: 0.3s all linear;
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+.btn:hover,
+.bnt:active {
+  transform: scale(1.05);
+}
+
+/* HERO SECTION STYLING */
+.section-hero {
+  position: relative;
+}
+
+.section-hero::before {
+  content: " ";
+  position: absolute;
+  width: 30%;
+  height: 50%;
+  display: inline-block;
+  bottom: 9.6rem;
+  right: 0;
+  background-color: #e6e6eb;
+  z-index: -1;
+}
+.primary-heading {
+  font-size: 6rem;
+  font-weight: 700;
+}
+.section-hero .para {
+  margin-top: 4.2rem;
+  margin-bottom: 4.2rem;
+}
+.hero-icons {
+  margin-top: 4.2rem;
+}
+.hero-icons .icon {
+  font-size: 5rem;
+  position: relative;
+  box-shadow: 0 6px 20px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+/* .hero-icons .icon::after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 60%;
+  background-color: var(--helper-color);
+  border-radius: 50%;
+  z-index: -1;
+} */
+.hero-icons h2 {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+.section-hero .hero-icon-style p {
+  line-height: 1.6;
+  font-weight: 500;
+  margin: 0;
+}
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hero-image img {
+  padding: 1rem;
+  border: 5px solid rgb(201, 192, 192);
+  box-shadow: 0 6px 20px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+.hero-image-overlay {
+  position: absolute;
+  bottom: 0;
+  /* left: -10%; */
+  right: -10%;
+  background-color: #1f4068;
+  padding: 4rem;
+  width: 40rem;
+}
+.hero-image-overlay p {
+  color: var(--white);
+}
+.hero-image-overlay p:nth-child(2) {
+  margin: 0;
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.hero-image-overlay p:last-child {
+  margin-top: 1rem;
+}
+
+/* MEDIA QUERY FOR RESPONSIVE  */
+@media (max-width: 1250px) {
+  .container {
+    padding: 0 6rem;
+  }
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 980px) {
+  .container {
+    max-width: 96rem;
+  }
+  .section-hero .grid-two-column {
+    grid-template-columns: 1fr;
+  }
+  .section-hero .hero-icons .grid-two-column {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #10375C;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translateX(100%);
+    transition: all 0.3s linear;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none;
+  }
+  .navbar .navbar-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar .navbar-link {
+    color: var(--white);
+  }
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 9999;
+  }
+  .active .navbar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    z-index: 999;
+  }
+
+  .active .mobile-navbar-btn .mobile-nav-icon[name="close"] {
+    display: block;
+    color: var(--white);
+  }
+  .active .mobile-navbar-btn .mobile-nav-icon[name="menu"] {
+    display: none;
+    color: var(--white);
+  }
+
+  .section-hero::before {
+    height: 30%;
+  }
+
+  @media (max-width: 520px) {
+    .container {
+      max-width: 720px;
+    }
+    .hero-image img {
+      width: 65%;
+    }
+    .hero-image .hero-image-overlay {
+      width: 90%;
+      left: -8%;
+    }
+  }
+}
